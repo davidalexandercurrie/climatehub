@@ -1,0 +1,1401 @@
+@font-face {
+    font-family: climatehub;
+    src: url(fonts/Striper-Regular.otf);
+}
+
+@font-face {
+    font-family: offset;
+    src: url(fonts/kaftan.otf);
+}
+
+@font-face {
+    font-family: navv;
+    /* src: url(fonts/body/dr/dr-medium-TRIAL.otf); */
+    src: url(fonts/GeneralSans-Medium.otf);
+}
+
+@font-face {
+    font-family: textt;
+    /* src: url(fonts/body/dr/dr-regular-TRIAL.otf); */
+    src: url(fonts/GeneralSans-Regular.otf);
+}
+
+@font-face {
+    font-family: titles;
+    /* src: url(fonts/body/dr/dr-medium-TRIAL.otf); */
+    src: url(fonts/Melodrama-Semibold.otf)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 900px) {
+    /* NAV */
+    nav a{
+        font-family: navv;
+        font-weight: bold;
+        font-size: 20px;
+        color: #2a2a2a;
+        text-decoration: none;
+    }
+
+    #logo{
+        width: auto;
+        height: 8vh;
+        margin: 2vh;
+    }
+
+    nav{
+        display: flex;
+        position: fixed;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 10vh;
+
+        background: #F6F5F4;
+    }
+
+    .nav-item{
+        width: 30vw;
+        height: 10vh;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    body{
+        font-family: textt;
+        background-color: #F6F5F4;
+    }
+
+    /* CLIMATE HUB */ 
+    h1{
+        font-family: climatehub;
+        font-size: 200px;
+        color: #000;
+        text-align: center;
+    }
+
+    /* MEASURE OFFSET REDUCE */
+    #footprint{
+        font-family: textt;
+        font-size: 70px;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /*Motion path scaling by Michelle Barker*/
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container h2 {
+        font-family: textt;
+        /* font-family: climatehub; */
+        font-size: 25px;
+        text-transform: uppercase;
+        
+        /*Dimensions of original path*/
+        width: 515px;
+        height: 168px;
+        
+        transform: scale(var(--x, 1));
+        transform-origin: var(--o, center);
+        margin: 0 auto;
+    }
+
+    .char {
+        --i: calc(50% / var(--char-total));
+        offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+        offset-distance: calc(var(--char-index) * 1.2rem);
+        position: absolute;
+        animation: move 1500ms infinite alternate forwards var(--delay, 0ms);
+    }
+
+
+    @keyframes move {
+        100% {
+            --i: 2rem;
+            offset-distance: calc((var(--char-index) * 1.2rem) + 12rem);
+        }
+    }
+
+    /*Vertical scroll snap*/
+    .wrapper{
+        height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+    }
+
+    section{
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+
+    .climateHub{
+        background-color: #F6F5F4;
+        font-family: climatehub;
+        font-size: 200px;
+        color: #0d915d;
+        width: 100vw;
+        height: 90vh;
+        padding-top: 10vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /*company overview*/
+    #companies{
+        display: none;
+    }
+
+    #certification1{
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 10vh;
+        /* border: 1px solid pink; */
+    }
+    
+    .company-picture{
+        min-width: 60vw;
+        min-height: 60vh;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .inview{
+        width: 940px;
+        height: 600px;
+        transition: transform 2s;
+    }
+ 
+    .inview.translated{
+        transform: translateY(-4vh);
+    }
+    
+    #company-item1{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    
+        width: 300px;
+        height: 300px;
+        padding: 5vh;
+        background-color: #D2E59E;
+    }
+    
+    #company-item2{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    
+        width: 300px;
+        height: 300px;
+        padding: 5vh;
+        background-color: #FF7DE8;
+    }
+    
+    #certification2{
+        width: 80vw;
+        height: 90vh;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10vh;
+        margin: 10vw;
+    }
+    
+    #company-item3{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    
+        width: 300px;
+        height: 300px;
+        padding: 5vh;
+        background-color: #CFAF8B;
+    }
+    
+    #certification3{
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 10vh;
+    } 
+    
+    #certification4{
+        width: 80vw;
+        height: 90vh;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10vh;
+        margin: 10vw;
+    }
+    
+    #company-item4{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    
+        width: 300px;
+        height: 300px;
+        padding: 5vh;
+        background-color: #003FD1;
+        color: white;
+    }
+
+    #certification5{
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10vh;
+    }
+
+    #company-item5{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    
+        min-width: 300px;
+        min-height: 300px;
+        padding: 5vh;
+        background-color: #C5908D;
+    }
+
+    .climateneutral{
+        width: 60vw;
+        height: auto;
+    }
+
+    .company-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 23vw;
+        height: 5vh;
+
+        margin-bottom: 2vh;
+    }
+
+    h3{
+        font-family: titles;
+        font-weight: bold;
+        font-size: 40px;
+        color: #000;
+    }
+
+    .company-pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 23vw;
+        min-height: 20vh;
+        padding: 0px;
+    }
+
+    .company-pic img{
+        width: 330px;
+        height: 230px;
+    }
+
+    .company-descrip{
+        margin-top: 2vh;
+        width: 23vw;
+    }
+
+    .company-descrip p{
+        font-size: 20px;
+        line-height: 3vh;
+    }
+
+    #carte{
+        display: flex;
+        flex-direction: column wrap;
+        justify-content: space-between;
+
+        margin-top: 2vh;
+        width: 23vw;
+    }
+
+    #services{
+        width: 10vw;
+        padding: 10px;
+    }
+
+    #services p, ul{
+        font-size: 15px;
+    }
+
+    #links{
+        width: 10vw;
+        padding: 10px;
+    }
+
+    /* NOTION PAGE*/
+    #carbon_container{
+        width: 100vw(-47px*2);
+        min-height: 100vh;
+
+        display: flex;
+        flex-wrap: wrap;
+        
+        justify-content: space-around;
+
+        margin-left: 47px;
+        margin-right: 47px;
+        padding-top: 10vh;
+    }
+    .carbon_item{
+        width: 25vw;
+        height: 35vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 2vh;
+        padding: 47px 20px 47px 20px;
+    }
+
+    .carbon_text{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        pointer-events: none;
+    }
+
+    .carbon_title{
+        min-height: 10vh;
+        width: 25vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .carbon_url{
+        color: black;
+    }
+
+    .carbon_title h1{
+        font-size: 45px;
+        font-family: titles;
+    }
+
+    .carbon_summary{
+        min-height: 10vh;
+        width: 25vw;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 5px;
+    }
+
+    .carbon_summary p{
+        font-family: textt;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .carbon_services{
+        min-height: 5vh;
+        width: 25vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .carbon_services ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: textt;
+        text-transform: lowercase;
+    }
+
+    .carbon_services ul li{
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 7px 15px 7px 15px;
+        margin-right: 5px;
+    }
+
+    .carbon_image_container{
+        width: 25vw;
+        height: 35vh;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 2vh;
+        padding: 47px 21px 47px 20px;
+
+        pointer-events: none;
+    }
+
+    .carbon_image_container img{
+        max-width: 25vw;
+        max-height: 35vh;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .animated{
+    }
+
+    /*TOOLS PAGE*/
+    .tools-category{
+        width: 100vw;
+        height: 90vh;
+        padding-top: 10vh;
+    }
+
+    .tools-category h2{
+        font-size: 124px;
+        margin-bottom: 10vh;
+
+        font-family: titles;
+        color: #2a2a2a;
+    }
+
+    .databases-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 70vw;
+        height: 10vh;
+
+        margin-left: 25vw;
+        margin-right: 5vw;
+
+        font-size: 19px;
+        color: #2a2a2a;
+    }
+
+    hr{
+        margin-left: 25vw;
+        margin-right: 5vw;
+    }
+
+    .databases-item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 20vw;
+        height: 6vh;
+    }
+
+    .databases-item a{
+        color: #2a2a2a;
+    }
+
+    .databases-descrip{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80vw;
+        height: 6vh;
+    }
+
+    mark {
+        --color1: #b96935;
+        --color2: #b96935;
+        --bg-height: 30%;
+          
+        all: unset;
+        background-image: linear-gradient(var(--color1), var(--color2));
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 0 var(--bg-height);
+        animation: highlight 2s 1 ease-out;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+      }
+      
+      
+      @keyframes highlight {
+        to {
+          background-size: 100% var(--bg-height);
+        }
+      }
+
+    /*doodles*/
+    #lamp{
+        width: auto; 
+        height: 30vh; 
+        position: absolute; 
+        top: 10vh; 
+        right: 0.1vw;
+    }
+
+    #planets{
+        width: auto; 
+        height: 20vh; 
+        margin-left: 2vw;
+    }
+
+    #star{
+        width: 20vw; 
+        height: auto; 
+        margin-left: 2vw; 
+        position: absolute;
+    }
+
+    #plant{
+        width: 20vw; 
+        height: auto; 
+        margin-left: 80vw; 
+        position: absolute;
+    }
+
+    #calculator{
+        width: 20vw; 
+        height: auto; 
+        margin-left: 2vw; 
+        position: absolute;
+    }
+}
+
+/* For tablets */
+@media only screen and (min-width: 600px) and (max-width:900px) {
+    #certificationsDesktop{
+        display: none;
+    }
+
+       /* NAV */
+       nav a{
+        font-family: navv;
+        font-size: 20px;
+        color: #2a2a2a;
+        text-decoration: none;
+    }
+
+    #logo{
+        width: auto;
+        height: 8vh;
+        margin: 2vh;
+    }
+
+    nav{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .nav-item{
+        width: 30vw;
+        height: 10vh;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    body{
+        font-family: textt;
+        background-color: #F6F5F4;
+    }
+
+    /* CLIMATE HUB */
+    #title{
+        display: flex;
+        width: 100vw;
+        height: 90vh;
+    }
+
+    h1{
+        font-family: climatehub;
+        font-size: 150px;
+        color: #0d915d;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+    }
+
+    /* MEASURE OFFSET REDUCE */
+    #footprint{
+        font-family: offset;
+        font-size: 70px;
+        color: #0d915d;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #measure{
+        width: 100vw;
+        height: 30vh;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 5vw;
+    }
+
+    #reduce{
+        width: 100vw;
+        height: 30vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #offset{
+        width: 100vw;
+        height: 30vh;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 5vw;
+    }
+
+    /*company overview*/
+    #companies{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        color: #2a2a2a;
+
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .companies-item{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+
+        width: 100vw;
+        min-height: 55vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+
+    }
+
+    .company-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 5vh;
+
+        margin-bottom: 2vh;
+    }
+
+    h3{
+        font-family: titles;
+        font-weight: 40px;
+        font-size: 50px;
+        color: #2a2a2a;
+    }
+
+    .company-pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100vw;
+        min-height: 20vh;
+        padding: 0px;
+    }
+
+    .company-pic img{
+        width: 660px;
+        height: 460px;
+    }
+
+    .company-descrip{
+        width: 100vw;
+        text-align: center;
+    }
+
+    .company-descrip p{
+        font-size: 25px;
+        line-height: 3vh;
+
+        padding: 5vw;
+    }
+
+    #carte{
+        display: flex;
+        flex-direction: column wrap;
+        justify-content: space-between;
+        width: 100vw;
+        font-size: 20px;
+    }
+
+    #services{
+        width: 50vw;
+        padding-left: 20vw;
+    }
+
+    #links{
+        width: 50vw;
+        padding-left: 20vw;
+    }
+
+    /*TOOLS PAGE*/
+    .tools-category{
+        width: 100vw;
+        min-height: 30vh;
+
+        margin-bottom: 5vh;
+    }
+
+    .tools-category h2{
+        font-size: 100px;
+        margin-bottom: 5vh;
+    }
+
+    .databases-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 70vw;
+        height: 10vh;
+
+        margin-left: 25vw;
+        margin-right: 5vw;
+
+        font-size: 20px;
+        color: #2a2a2a;
+    }
+
+    hr{
+        margin-left: 25vw;
+        margin-right: 5vw;
+    }
+
+    .databases-item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 25vw;
+        height: 4vh;
+    }
+
+    .databases-item a{
+        color: #2a2a2a;
+    }
+
+    .databases-descrip{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50vw;
+        height: 4vh;
+    }
+
+    /*doodles*/
+    #lamp{
+        width: auto; 
+        height: 10vh; 
+        position: absolute; 
+        top: 10vh; 
+        right: 0.1vw;
+    }
+    
+    #planets{
+        width: auto; 
+        height: 20vh; 
+        margin-left: 2vw;
+    }
+    
+    #star{
+        width: 20vw; 
+        height: auto; 
+        margin-left: 2vw; 
+        position: absolute;
+    }
+    
+    #plant{
+        width: 30vw; 
+        height: auto; 
+        margin-left: 70vw;
+        position: relative;
+    }
+    
+    #calculator{
+        width: 20vw; 
+        height: auto; 
+        margin-left: 2vw; 
+        position: relative;
+        left: 5vw;
+    }
+}
+
+/* For mobiles */
+@media only screen and (max-width: 600px){
+    #certificationsDesktop{
+        display: none;
+    }
+
+    /* NAV */
+    nav a{
+        font-family: navv;
+        font-size: 17px;
+        color: #2a2a2a;
+        text-decoration: none;
+    }
+
+    #logo{
+        width: auto;
+        height: 10vh;
+        margin: 2vh;
+    }
+
+    nav{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 10vh;
+
+        position: fixed;
+    }
+
+    .nav-item{
+        width: 30vw;
+        height: 10vh;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    body{
+        font-family: textt;
+        background-color: #F6F5F4;
+    }
+
+    /* CLIMATE HUB */
+    #title{
+        display: flex;
+        width: 95vw;
+        height: 90vh;
+    }
+
+    h1{
+        font-family: climatehub;
+        font-size: 80px;
+        color: #0d915d;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* MEASURE OFFSET REDUCE */
+    #footprint{
+        font-family: offset;
+        font-size: 55px;
+        color: #0d915d;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        width: 95vw;
+        height: 100vh;
+    }
+
+    /*Motion path scaling by Michelle Barker*/
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .container h2 {
+        font-family: textt;
+            /* font-family: climatehub; */
+        font-size: 25px;
+        text-transform: uppercase;
+            
+        /*Dimensions of original path*/
+        width: 515px;
+        height: 168px;
+            
+        transform: scale(var(--x, 1));
+        transform-origin: var(--o, center);
+        margin: 0 auto;
+    }
+    
+    .char {
+        --i: calc(50% / var(--char-total));
+        offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+        offset-distance: calc(var(--char-index) * 1.2rem);
+        position: absolute;
+        animation: move 1500ms infinite alternate forwards var(--delay, 0ms);
+    }
+    
+    
+    @keyframes move {
+        100% {
+            --i: 2rem;
+            offset-distance: calc((var(--char-index) * 1.2rem) + 12rem);
+        }
+    }
+
+    /*Vertical scroll snap*/
+    .wrapper{
+        height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+    }
+
+    section{
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+
+    .climateClock{
+        display: none;
+    }
+
+    /* #measure{
+        width: 90vw;
+        height: 30vh;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #reduce{
+        width: 90vw;
+        height: 30vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #offset{
+        width: 90vw;
+        height: 30vh;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    } */
+
+    /*company overview*/
+    #companies{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        color: #2a2a2a;
+
+        padding-top: 10vh;
+
+        width: 100vw;
+        /* height: 100vh; */
+        height: 90vh;
+    }
+
+    .companies-item{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+
+        width: 100vw;
+        min-height: 55vh;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .company-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 5vh;
+
+        margin-bottom: 2vh;
+    }
+
+    h3{
+        font-family: titles;
+        font-weight: bold;
+        font-size: 30px;
+        color: #2a2a2a;
+    }
+
+    .company-pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100vw;
+        min-height: 20vh;
+        padding: 0px;
+    }
+
+    .company-pic img{
+        width: 330px;
+        height: 230px;
+    }
+
+    .company-descrip{
+        width: 100vw;
+    }
+
+    .company-descrip p{
+        font-size: 17px;
+        padding: 5vw;
+    }
+
+    #carte{
+        display: flex;
+        flex-direction: column wrap;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    #services{
+        width: 50vw;
+        padding-left: 20vw;
+    }
+
+    #links{
+        width: 50vw;
+        padding-left: 20vw;
+    }
+
+    /* NOTION PAGE*/
+    #carbon_container{
+        width: 100vw(-5vw*2);
+        min-height: 100vh;
+
+        display: flex;
+        flex-wrap: wrap;
+        
+        justify-content: space-around;
+
+        margin-left: 5vw;
+        margin-right: 5vw;
+
+        padding-top: 10vh;
+    }
+    .carbon_item{
+        width: 100vw(-5vw*2);
+        height: 40vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding-bottom: 2vh;
+    }
+
+    .carbon_text{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        pointer-events: none;
+    }
+
+    .carbon_title{
+        min-height: 10vh;
+        width: 100vw(-5vw*2);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .carbon_url{
+        color: black;
+    }
+
+    .carbon_title h1{
+        font-size: 45px;
+        font-family: titles;
+        color: #000;
+    }
+
+    .carbon_summary{
+        min-height: 10vh;
+        width: 100vw(-5vw*2);
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 5px;
+    }
+
+    .carbon_summary p{
+        font-family: textt;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .carbon_services{
+        min-height: 5vh;
+        width: 100vw(-5vw*2);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .carbon_services ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: textt;
+        text-transform: lowercase;
+    }
+
+    .carbon_services ul li{
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 7px 15px 7px 15px;
+        margin-right: 5px;
+    }
+
+    .carbon_image_container{
+        display: none;
+    }
+
+    .carbon_image_container img{
+        display: none;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    /*TOOLS PAGE*/
+
+    mark {
+        --color1: #b96935;
+        --color2: #b96935;
+        --bg-height: 30%;
+          
+        all: unset;
+        background-image: linear-gradient(var(--color1), var(--color2));
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 0 var(--bg-height);
+        animation: highlight 2s 1 ease-out;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+    }
+      
+      
+    @keyframes highlight {
+        to {
+          background-size: 100% var(--bg-height);
+        }
+    }
+    
+    .tools-category{
+        width: 100vw;
+        min-height: 30vh;
+
+        margin-bottom: 7vh;
+
+        padding-top: 10vh;
+    }
+
+    .tools-category h2{
+        font-size: 50px;
+        margin-bottom: 3vh;
+    }
+
+    .databases-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100vw;
+        height: 10vh;
+
+        font-size: 13px;
+        color: #2a2a2a;
+
+        margin-left: 2vw;
+    }
+
+    hr{
+        margin-left: 15vw;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .databases-item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 25vw;
+        height: 4vh;
+    }
+
+    .databases-item a{
+        color: #2a2a2a;
+    }
+
+    .databases-descrip{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 75vw;
+        height: 4vh;
+    }
+
+    /*doodles*/
+    #lamp{
+        width: auto; 
+        height: 10vh; 
+        position: absolute; 
+        top: 10vh; 
+        right: 0.1vw;
+    }
+    
+    #planets{
+        width: auto; 
+        height: 20vh; 
+        margin-left: 2vw;
+    }
+    
+    #star{
+        display: none;
+    }
+    
+    #plant{
+        width: 30vw; 
+        height: auto; 
+        margin-left: 70vw;
+        position: relative;
+    }
+    
+    #calculator{
+        width: 20vw; 
+        height: auto; 
+        margin-left: 2vw; 
+        position: relative;
+        left: 40vw;
+    }
+
+}
+
+.shapes{
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100vw;
+    /* background: #0d915d; */
+    /* background:  #2128bd; */
+    overflow: hidden; /*prevent unwanted horizontal scrolling and extra whitespace in your project when elements exist outside the viewport*/
+}
+
+.content{
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    mix-blend-mode: screen; /*property sets how an element's content should blend with the content of the element's parent and the element's background*/
+}
+
+.shape{
+    will-change: transform;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape.shape-1{
+    background:#b96935;
+    width: 550px;
+    height: 550px;
+    margin: -325px 0 0 -325px;
+}
+
+.shape.shape-2{
+    background: #56b0c0;
+    width: 340px;
+    height: 340px;
+    margin: -220px 0 0 -220px;
+}
+
+.shape.shape-3{
+    background: #0d915d;
+    width: 170px;
+    height: 170px;
+    margin: -135px 0 0 -135px;
+}
+

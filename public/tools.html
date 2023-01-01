@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Climate Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img id="logo" src="images/doodles/earth.webp"></a>
+        <div class="nav-item"><a href="cert.html">Certifications</a></div>
+        <div class=nav-item><a href="notion.html">Footprint</a></div>
+        <div class="nav-item"><a href="tools.html">Tools</a></div>
+    </nav>
+
+        <div class="tools-category">
+                <h2> DATABASES </h2>
+                <!-- doodle -->
+                <img id="lamp" src="images/doodles/lamp.png">
+
+                <div class="databases-container">
+                    <p class ="databases-item">
+                        <a href="https://ecoinvent.org/the-ecoinvent-database/" target="blank">
+                            EcoInvent
+                        </a>
+                    </p>
+                    <p class ="databases-descrip">
+                        <mark>Life Cycle Inventory&nbsp;</mark> (LCI) database supporting various types of sustainability assessments
+                    </p> 
+                </div>
+                <hr size="1" width="70%" color="black"> 
+
+                <div class = "databases-container">
+                    <p class ="databases-item">
+                        <a href="https://www.carbonscopedata.com/" target="blank">
+                            Carbon Scope Data
+                        </a>
+                    </p>
+                    <p class ="databases-descrip">
+                        Life Cycle Inventory (LCI) database for GHG&nbsp;<mark>emissions, energy use & water</mark>
+                    </p>
+                </div>
+
+                <hr size="1" width="70%" color="black">
+
+                <div class="databases-container">
+                    <p class ="databases-item">
+                        <a href="https://apps.carboncloud.com/climatehub/" target="blank">
+                            CarbonCloud x ClimateHub
+                        </a>
+                    </p>
+                    <p class ="databases-descrip">
+                        Climate&nbsp;<mark>footprints of food</mark>&nbsp;from around the world
+                    </p>
+                </div>
+
+                <hr size="1" width="70%" color="black">
+
+                <!-- doodle -->
+                <img id="planets" src="images/doodles/planetsoodles.png">
+        </div>
+
+        <div class="tools-category">
+            <h2> GUIDES & RESOURCES </h2>
+                <!-- doodle -->
+                <img id="star" src="images/doodles/stardoodle.png">
+
+                    <div class="databases-container">
+                        <p class ="databases-item">
+                            <a href="https://www.trendwatching.com/business-needs-new-frameworks-%EF%B8%8F?utm_campaign=Business%20of%20Purpose%20NL&utm_medium=email&_hsmi=118624161&_hsenc=p2ANqtz-82VpR7ayHItFskRt2zI82wT4cxn8MVm18mDTJbsShRibXLRMYLLLkumjI_O6pMvZ3WMEyYRr7C-a77oslaIudIq_Ej6Q&utm_content=118624161&utm_source=hs_automation" target="blank">
+                                Business of Purpose
+                            </a>
+                        </p>
+                        <p class ="databases-descrip">
+                            Business for Impact -&nbsp;<mark>Frameworks & Tools</mark>
+                        </p> 
+                    </div>
+                    
+                    <hr size="1" width="70%" color="black"> 
+
+                    <div class = "databases-container">
+                        <p class ="databases-item">
+                            <a href="https://www.ctvc.co/climate-tech-vc/" target="blank">
+                                Climate Tech VC
+                            </a>
+                        </p>
+                        <p class ="databases-descrip">
+                            List of&nbsp;<mark>Climate VCs</mark>
+                        </p>
+                    </div>
+
+                    <hr size="1" width="70%" color="black">
+
+                    <div class="databases-container">
+                        <p class ="databases-item">
+                            <a href="https://www.ctvc.co/climate-tech-vc/" target="blank">
+                                Okepa x Certifications
+                            </a>
+                        </p>
+                        <p class ="databases-descrip">
+                            Guide to sustainability&nbsp;<mark>certifications</mark>
+                        </p>
+                    </div>
+
+                    <hr size="1" width="70%" color="black">
+                <!-- doodle -->
+                <img id="plant" src="images/doodles/plantdoodle.png">
+        </div>
+
+        <div class="tools-category">
+
+            <h2> CALCULATORS </h2>
+
+                <!-- doodle -->
+                <img id="calculator" src="images/doodles/calculator.png">
+
+                <div class="databases-container">
+                    <p class ="databases-item">
+                        <a href="https://calculator.carbonfootprint.com/calculator.aspx" target="blank">
+                            Carbon Footprint Calculator
+                        </a>
+                    </p>
+                    <p class ="databases-descrip">
+                        Calculate your&nbsp;<mark>footprint</mark>&nbsp;across&nbsp;<mark>transportation and household</mark>&nbsp;related emissions
+                    </p> 
+                </div>
+
+                <hr size="1" width="70%" color="black"> 
+
+                <div class = "databases-container">
+                    <p class ="databases-item">
+                        <a href="https://www.omnicalculator.com/ecology/plastic-footprint" target="blank">
+                            OMNI
+                        </a>
+                    </p>
+                    <p class ="databases-descrip">
+                        <mark>Plastic Footprint</mark>&nbsp;Calculator
+                    </p>
+                </div>
+
+                <hr size="1" width="70%" color="black">
+            </div>
+
+    <script>
+        (function (document) {
+            const markers = [...document.querySelectorAll('mark')];
+            
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach((entry) => {
+                if (entry.intersectionRatio > 0) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+                });
+            }, {
+                threshold: 0.8
+            });
+            
+            markers.forEach(mark => {
+                observer.observe(mark);
+            });
+            })(document);
+    </script>
+    
+</body>
+</html>

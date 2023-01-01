@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Climate Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> -->
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img id="logo" src="images/doodles/earth.webp"></a>
+        <div class="nav-item"><a href="cert.html">Certifications</a></div>
+        <div class=nav-item><a href="notion.html">Footprint</a></div>
+        <div class="nav-item"><a href="tools.html">Tools</a></div>
+    </nav>
+
+    <div class="wrapper">
+        <section>
+                <!-- TITLE -->
+                <!-- <div id="content"> -->
+                    <h1 class="climateHub" id="title">CLIMATE HUB</h1> 
+                    <!-- <div class="shapes">
+                        <span class="shape shape-1"></span>
+                        <span class="shape shape-2"></span>
+                        <span class="shape shape-3"></span>
+                    </div> -->
+                <!-- </div> -->
+        </section>
+
+        <!-- FOOTPRINT to be animated -->
+        <section id="footprint">
+                <div class="container">
+                    <h2 data-splitting>measure - offset - reduce</h2>
+                </div>
+        </section>
+
+        <section id="climateClock">
+            <style>.climate-clock{position:relative;padding-bottom:120%;height:0;overflow:hidden;max-width:100%;}.climate-clock iframe{position:absolute;top:10vh;left:0;width:100%;height:90%;}@media(min-width:700px){.climate-clock{padding-bottom:56.25%;}}</style><div class='climate-clock'><iframe src='//embed.climateclock.net?buttons=1&audio=0' style='border:0'></iframe></div>
+        </section> -->
+    </div>
+
+    <!-- <script>
+        document.body.addEventListener("mousemove", (evt) => {
+        const mouseX = evt.clientX; //Get the horizontal coordinate
+        const mouseY = evt.clientY; //Get the vertical coordinate
+
+        gsap.set(".cursor", {
+            x: mouseX,
+            y: mouseY
+        });
+
+        gsap.to(".shape", {
+            x: mouseX,
+            y: mouseY,
+            stagger: -0.1 
+        });
+    })
+    </script> -->
+    <script src="public.js"></script>
+</body>
+</html>
